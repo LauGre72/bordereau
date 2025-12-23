@@ -77,7 +77,7 @@ export type DemandeId = (typeof DEMANDES_OPTIONS)[number]["id"]
 
 // Pièces d’identité
 const PI_OPTIONS = [
-  { id: "ci_eleve", label: "Carte d’identité élève" },
+  { id: "ci_eleve", label: "Carte d’identité de l’élève" },
   { id: "pass_eleve", label: "Passeport élève" },
   { id: "livret_famille", label: "Livret de famille" },
   { id: "extrait_naissance", label: "Extrait d’acte de naissance" },
