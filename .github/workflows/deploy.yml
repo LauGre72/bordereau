@@ -55,7 +55,8 @@ jobs:
           fi
           PORT="${SSH_PORT:-22}"
           rsync -az --delete \
+            --rsync-path="sudo rsync" \
             -e "ssh -p ${PORT} -o StrictHostKeyChecking=accept-new" \
-            dist/ "${SSH_USER}@${SSH_HOST}:/tmp/bordereau-deploy/"
+            dist/ "${SSH_USER}@${SSH_HOST}:/var/www/bordereau.ersh.fr/"
           ssh -p "${PORT}" -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
-            "sudo rsync -az --delete /tmp/bordereau-deploy/ /var/www/bordereau.ersh.fr/ && sudo chown -R www-data:www-data /var/www/bordereau.ersh.fr"
+            "sudo chown -R www-data:www-data /var/www/bordereau.ersh.fr"
