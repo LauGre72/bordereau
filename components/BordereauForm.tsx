@@ -71,6 +71,7 @@ const DEMANDES_OPTIONS = [
   { id: "aeeh", label: "AEEH" },
   { id: "pch", label: "PCH" },
   { id: "cmi", label: "CMI" },
+  { id: "rqth", label: "RQTH" },
 ] as const
 
 export type DemandeId = (typeof DEMANDES_OPTIONS)[number]["id"]
